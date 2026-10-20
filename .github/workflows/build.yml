@@ -1,0 +1,25 @@
+姓名: 构建安装包
+在……之上:
+workflow_dispatch:
+推:
+分支机构: [主要的]
+权限:
+内容: 写
+工作:
+建立:
+连接的：ubuntu-最新
+步骤:
+      - uses: 操作/结帐@v4
+      - uses: 操作/设置-Java@v4
+和……一起:
+分布: temurin
+现在的java版本: 17
+-uses: Gradle/操作/设置-Gradle@v4
+和……一起:
+gradle-version: 8.7
+跑跑: bash设置.嘘ash设置.嘘
+跑跑: gradle组件调试--no-daemon-p DeskPetRadle组件调试--no-daemon-p DeskPet
+-uses: softprops/action-gh-release@v2
+和……一起:
+tag_name: V1
+文件: DeskPet/app/build/outputs/apk/debug/app-debug.APK
